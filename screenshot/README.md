@@ -1,138 +1,15 @@
-# ShoB
-
-A project aimed to build an order tracking iOS application and also to learn SwiftUI.
-
-## Status
-
-In progress...
-
-## Goal
-
-- [ ] 100% SwiftUI
-- [ ] Intergrage CoreData & iCloud AutoSync
-- [ ] CloudKit Share Support
-- [ ] Dark Mode Support
-- [ ] Markdown Support
-- [ ] Generate Invoice PDF
-- [ ] Deploy
-
-## Preview
-
-### Order Scene
-
-![Order Scene Preview](Preview/order.png)
-![Order Input 01](Preview/order-input-01.png)
-![Order Input 02](Preview/order-input-02.png)
-
-### Customer Scene
-
-![Customer Scene Preview](Preview/customer.png)
-
-### Item Scene
-
-![Item Scene Preview](Preview/item.png)
-
-### Store Scene
-
-![Store Scene Preview](Preview/store.png)
-
-## Learning
-
-This is a section for listing out documents, resources, thoughts, and approaches.
-
-### Core Data & iCloud Auto Sync
-
-Since iOS 13 now supports Core Data auto sync with CloudKit, the project will take advantage of that.
-
-**Requirement:**
-
-- Creating the Core Data Stack using `NSPersistentCloudKitContainer` instead of `NSPersistentContainer`.
-- The auto sync feature requires that all properties of `NSManagedObject`'s Entity must be *optional* in the `.xcdatamodeld` file.
-
-**Resource**:
-
-- [Setting Up Core Data with CloudKit][Setting Up Core Data with CloudKit]
-- [Creating a Core Data Model for CloudKit][Creating a Core Data Model for CloudKit]
-- [Reading CloudKit Records for Core Data][Reading CloudKit Records for Core Data]
-- [Syncing a Core Data Store with CloudKit][Syncing a Core Data Store with CloudKit]
-- [Accessing Data When the Store Has Changed][Accessing Data When the Store Has Changed]
-- [Consuming Relevant Store Changes][Consuming Relevant Store Changes]
-
-### CloudKit Share
-
-*Still on the list*.
-
-### Dark Mode
-
-To support dark mode out of the box, the project makes use of system colors such as `Color.primary`, `.secondary`, and `.accentColor`...
-
-### Markdown
-
-*Still on the list*.
-
-### Generate PDF
-
-*Still on the list*.
-
-### View
-
-#### Model View View Model (MVVM)
-
-The MVVM is used on most of the top level views to handle view update. Whereas, some of the inner views or views that are part of the top level views might only need `@State` or `@ObservedObject` properties.
-
-- Most top level views have their own view model either a `struct` or a `class` which conforms to `ObservableObject`.
-- Property Wrapper `@Published` is used in the class view model to get will-change signal from the publisher for the properties of interest.
-
-#### Navigation View Push/Pop
-
-There is a feature in the application to discard any unsaved changes when user tap on the navigation view's back button.
-
-Until there is a native way of doing this, the approach right now is to use [`NavigationStateHandler`][NavigationStateHandler] object to setup action to perform when the view is pushed or popped.
-
-#### Create/Read/Update/Delete Core Data Object
-
-The approach right now is the make use of `EnvironmentObject`. There will be a concrete data source object specific to each type of model object that will handle all the actions.
-
-The concrete data source object will conform to [`ObjectDataSource`][ObjectDataSource] protocol. The protocol has all the methods for fetching, creating, reading, updating, deleting, and validating `NSManagedObject`. The `ObjectDataSource` protocol works hand in hand with [`ObjectValidatable`][ObjectValidatable] protocol.
-
-Therefore, views that have access to the `EnvironmentObject` will be able to access objects and methods to perform necessary actions.
-
-- Concrete classes conform to `ObjectDataSource`:
-  - [`OrderDataSource`][OrderDataSource]
-  - [`CustomerDataSource`][CustomerDataSource]
-  - [`SaleItemDataSource`][SaleItemDataSource]
-  - [`StoreDataSource`][StoreDataSource]
-- Concrete classes conform to `ObjectValidatable`:
-  - `Store`
-  - `Customer`
-  - `Order`
-  - `OrderItem`
-  - `SaleItem`
-
-<!-- MARK: - Link -->
-
-[NavigationStateHandler]: https://github.com/iDara09/ShoB/blob/master/ShoB/Utility/NavigationStateHandler.swift
-
-[ObjectValidatable]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/ObjectValidatable.swift
-
-[ObjectDataSource]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/ObjectDataSource.swift
-
-[CustomerDataSource]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/CustomerDataSource.swift
-
-[OrderDataSource]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/OrderDataSource.swift
-
-[SaleItemDataSource]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/SaleItemDataSource.swift
-
-[StoreDataSource]: https://github.com/iDara09/ShoB/blob/master/ShoB/DataSource/StoreDataSource.swift
-
-[Setting Up Core Data with CloudKit]: https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/setting_up_core_data_with_cloudkit
-
-[Creating a Core Data Model for CloudKit]: https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/creating_a_core_data_model_for_cloudkit
-
-[Reading CloudKit Records for Core Data]: https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/reading_cloudkit_records_for_core_data
-
-[Syncing a Core Data Store with CloudKit]: https://developer.apple.com/documentation/coredata/mirroring_a_core_data_store_with_cloudkit/syncing_a_core_data_store_with_cloudkit
-
-[Accessing Data When the Store Has Changed]: https://developer.apple.com/documentation/coredata/accessing_data_when_the_store_has_changed
-
-[Consuming Relevant Store Changes]: https://developer.apple.com/documentation/coredata/consuming_relevant_store_changes
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 09 26](https://github.com/user-attachments/assets/69e267d8-80aa-47f6-9079-a56aac2373ba)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 09 29](https://github.com/user-attachments/assets/fffd7c40-9c4f-4ee3-9755-e5d16363ab1c)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 09 31](https://github.com/user-attachments/assets/7e12817f-3c33-45ab-abeb-fbd9e01bf8d6)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 09 32](https://github.com/user-attachments/assets/ed1e68df-c4cd-4344-868d-1380919fcb12)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 09 37](https://github.com/user-attachments/assets/d76378d3-7570-4aae-a08c-7ca30fd43bc4)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 14 48](https://github.com/user-attachments/assets/73dd1966-a978-4cf8-9a54-e8b390554e84)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 18 21](https://github.com/user-attachments/assets/f3754392-bb04-4a23-9b68-3097b02e8416)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 16 53](https://github.com/user-attachments/assets/fc7d0243-c73b-432c-bc92-bd2a080d9069)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 16 41](https://github.com/user-attachments/assets/4d8c512b-778d-41c5-8a43-890f1d08e994)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 16 16](https://github.com/user-attachments/assets/2c3bd75e-ecc4-4d7b-b3ca-7baf2bb0e93f)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 16 10](https://github.com/user-attachments/assets/834f6922-2ea9-4904-9958-797b1e3ab2f6)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 15 46](https://github.com/user-attachments/assets/83c6c45b-4be1-4d4f-ac4a-999b04d3d42a)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 15 43](https://github.com/user-attachments/assets/563ff5a7-5bb6-4eb1-92d8-8bebec9a2e02)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 15 40](https://github.com/user-attachments/assets/5941477f-cf16-4d32-8ef2-9b81a3c934e0)
+![Simulator Screenshot - iPhone 16 Pro - 2025-03-24 at 20 18 25](https://github.com/user-attachments/assets/cd9f846c-026d-4030-be1f-a564a90cd27d)
