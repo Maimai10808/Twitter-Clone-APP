@@ -375,21 +375,3 @@ Twitter Clone APP 教学安排与实施方案
 	2.	互动与讨论：鼓励学生提问和讨论解决方案，促进理解和知识分享。
 	3.	代码审查和反馈：定期进行代码审查，提供反馈并帮助学生解决问题。
 	4.	课后资源：提供相关的文档和教程，鼓励学生继续学习和实践。
-
-
-
- <img src="https://github.com/user-attachments/assets/69e267d8-80aa-47f6-9079-a56aac2373ba" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/fffd7c40-9c4f-4ee3-9755-e5d16363ab1c" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/7e12817f-3c33-45ab-abeb-fbd9e01bf8d6" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/ed1e68df-c4cd-4344-868d-1380919fcb12" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/d76378d3-7570-4aae-a08c-7ca30fd43bc4" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/73dd1966-a978-4cf8-9a54-e8b390554e84" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/5941477f-cf16-4d32-8ef2-9b81a3c934e0" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/563ff5a7-5bb6-4eb1-92d8-8bebec9a2e02" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/83c6c45b-4be1-4d4f-ac4a-999b04d3d42a" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/834f6922-2ea9-4904-9958-797b1e3ab2f6" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/2c3bd75e-ecc4-4d7b-b3ca-7baf2bb0e93f" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/4d8c512b-778d-41c5-8a43-890f1d08e994" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/fc7d0243-c73b-432c-bc92-bd2a080d9069" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/f3754392-bb04-4a23-9b68-3097b02e8416" width="300" height="auto">
-<img src="https://github.com/user-attachments/assets/cd9f846c-026d-4030-be1f-a564a90cd27d" width="300" height="auto">
