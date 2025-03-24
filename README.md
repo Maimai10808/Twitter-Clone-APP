@@ -24,6 +24,7 @@
 
 # Twitter-Clone-APP
 
+ ## English 中文 日本語 Deutsch Italiano Français Español Русский 한국어 हिंदी 廣東話 雅言 العربية
 
 ---
 ## The technical highlights of this project include:
